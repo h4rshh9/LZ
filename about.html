@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<style>
+
+    .navbar{
+        height: 90px;
+        /* width: 100%; */
+        display: flex;
+        position: fixed;
+        top: 0px;
+
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 150px);
+        margin: 0 auto;
+        font-weight: bold;
+        background: linear-gradient(#e6e6e6, #ffffff);
+        box-shadow: 5px 5px 10px #e3e3e3
+                -5px -5px -10px #ffffff;
+        border-radius: 20px;
+    }
+
+    .nav-logo{
+        color: #ed4c4c;
+        text-decoration: none;
+        border-radius: 10px;
+        background: linear-gradient(#e6e6e6, #ffffff);
+    box-shadow: 5px 5px 10px #ffffff
+            -5px -5px -10px #ffffff;
+        transition: all .1s ease-in-out;
+    }
+
+    .nav-item{
+        color: #448ebe;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 10px;
+        background: linear-gradient(#e6e6e6, #ffffff);
+        box-shadow: 5px 5px 10px #ffffff
+                -5px -5px -10px #ffffff;
+        transition: all .1s ease-in-out;
+        
+    }
+
+
+    .nav-item:hover {
+        background-color: #d1e4ff;
+        color: #003366;
+    }
+    
+    .nav-logo:hover {
+        background-color: #d1e4ff;
+        color: #003366;
+    }
+
+    .nav-item:active{
+        background: linear-gradient(#e6e6e6, #ffffff);
+        box-shadow: 5px 5px 10px #e3e3e3
+                -5px -5px -10px #ffffff;
+        transform: scale(.95);
+        color: #ac203c;
+    }
+
+    .nav-logo:active{
+        background: linear-gradient(#e6e6e6, #ffffff);
+        box-shadow: 5px 5px 10px #e3e3e3
+                -5px -5px -10px #ffffff;
+        transform: scale(.95);
+        color: #ac203c;
+    }
+
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .nav-item {
+            margin: 5px 0;
+        }
+    }
+    body{
+        margin: 0;
+    }
+    #head{
+        text-align: center;
+    }
+
+    h1{
+        font-weight: 900;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #pic{
+        height: 500px;
+        display: flex;
+    }
+
+    #text{
+        text-align: center;
+        height: 230px;
+        width: 700px;
+        margin-left: 400px;
+        margin-bottom: 5px;
+    }
+
+    #p{
+        height: 250px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        width: 100%;
+        display: flex;
+        border: 1px solid rgb(223, 218, 218);
+
+    }
+    .t{
+        height: 200px;
+        width: 300px;
+        display: inline-block;
+        color: rgb(6, 6, 6);
+        margin: 50px 1px 25px 150px;
+    }
+
+    h3{
+        text-align: center;
+    }
+    p{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <nav class="navbar" style="width: 100%;">
+        <a href="index.html" class="nav-logo"><p>LearningZone</p></a>
+        <div>
+            <a href="login.html" class="nav-item">Sign ln</a>
+            <a href="contact.html" class="nav-item">Contact Us</a>
+            <a href="index.html" class="nav-item">Home</a>
+        </div>
+    </nav>
+    <div id="head">
+
+        <h1>About  The  Lean <br>LearningZone</h1>
+        <h2>The Lean Enterprise Website conducts research and shares practical <br> information that advances lean thinking and practice.</h2>
+    </div>
+
+    <div id="pic">
+        <img src="https://i0.wp.com/codakid.com/wp-content/uploads/2017/07/iStock-598234802.jpg" style="border-radius: 20px;" alt="" width="100%" height="100%">
+        
+    </div>
+
+    <div id="text">
+        <h3>
+
+            The Lean LearningZone Inc. is a 501(c)(3) nonprofit based in Boston, MA, with a mission to make things better by advancing lean thinking and practice. It was founded in 1997 by management expert James P. Womack, PhD. <br>
+            
+            Compared with traditional “think” tanks, we are a “do” tank. In partnership with select organizations, we carefully develop hypotheses about lean thinking and experiment to see which approaches work best in the real world. We then share and teach what we discover, providing new methods for organizational transformation. <br>
+            We strive to answer every leader’s and manager’s most pressing question: “What can I do next to make a difference in my organization?”
+        </h3>
+        </div>
+        
+        <div id="p">
+            <div class="t">
+                <h1>150+</h1>
+                <h3>Years of Lean Coaching <br> Experience</h3>
+            </div>
+            <div class="t">
+                <h1>29,000+</h1>
+                <h3>People Trained</h3>
+            </div>
+            <div class="t">
+                <h1>150+</h1>
+                <h3>Partner Companies Coached</h3>
+            </div>
+        </div>
+        <div id="text">
+            At LeetCode, our mission is to help you improve yourself and land your dream job. We have a sizable repository of interview resources for many companies. In the past few years, our users have landed jobs at top companies around the world.
+
+            
+        </div>
+</body>
+</html>
