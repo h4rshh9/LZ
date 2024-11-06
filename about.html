@@ -3,187 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<style>
+    <title>About - LearningZone</title>
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
 
-    .navbar{
-        height: 90px;
-        /* width: 100%; */
-        display: flex;
-        position: fixed;
-        top: 0px;
-
-        justify-content: space-between;
-        align-items: center;
-        width: calc(100% - 150px);
-        margin: 0 auto;
-        font-weight: bold;
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #e3e3e3
-                -5px -5px -10px #ffffff;
-        border-radius: 20px;
-    }
-
-    .nav-logo{
-        color: #ed4c4c;
-        text-decoration: none;
-        border-radius: 10px;
-        background: linear-gradient(#e6e6e6, #ffffff);
-    box-shadow: 5px 5px 10px #ffffff
-            -5px -5px -10px #ffffff;
-        transition: all .1s ease-in-out;
-    }
-
-    .nav-item{
-        color: #448ebe;
-        text-decoration: none;
-        padding: 10px 20px;
-        margin: 0 10px;
-        border-radius: 10px;
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #ffffff
-                -5px -5px -10px #ffffff;
-        transition: all .1s ease-in-out;
-        
-    }
-
-
-    .nav-item:hover {
-        background-color: #d1e4ff;
-        color: #003366;
-    }
-    
-    .nav-logo:hover {
-        background-color: #d1e4ff;
-        color: #003366;
-    }
-
-    .nav-item:active{
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #e3e3e3
-                -5px -5px -10px #ffffff;
-        transform: scale(.95);
-        color: #ac203c;
-    }
-
-    .nav-logo:active{
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #e3e3e3
-                -5px -5px -10px #ffffff;
-        transform: scale(.95);
-        color: #ac203c;
-    }
-
-
-    @media (max-width: 768px) {
+        /* Navbar Styles */
         .navbar {
-            flex-direction: column;
-            align-items: flex-start;
+            height: 90px;
+            display: flex;
+            position: fixed;
+            top: 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
             width: 100%;
+            background: linear-gradient(#e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #e3e3e3, -5px -5px -10px #ffffff;
+            border-radius: 20px;
+            z-index: 1000;
         }
+
+        .nav-logo {
+            color: #ed4c4c;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            background: linear-gradient(#e6e6e6, #ffffff);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #ffffff, -5px -5px -10px #ffffff;
+            transition: all 0.1s ease-in-out;
+        }
+
         .nav-item {
-            margin: 5px 0;
+            color: #448ebe;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+            background: linear-gradient(#e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #ffffff, -5px -5px -10px #ffffff;
+            transition: all 0.1s ease-in-out;
         }
-    }
-    body{
-        margin: 0;
-    }
-    #head{
-        text-align: center;
-    }
 
-    h1{
-        font-weight: 900;
-        font-size: 50px;
-        text-align: center;
-    }
+        .nav-item:hover,
+        .nav-logo:hover {
+            background-color: #d1e4ff;
+            color: #003366;
+        }
 
-    #pic{
-        height: 500px;
-        display: flex;
-    }
+        .nav-item:active,
+        .nav-logo:active {
+            background: linear-gradient(#e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #e3e3e3, -5px -5px -10px #ffffff;
+            transform: scale(0.95);
+            color: #ac203c;
+        }
 
-    #text{
-        text-align: center;
-        height: 230px;
-        width: 700px;
-        margin-left: 400px;
-        margin-bottom: 5px;
-    }
+        /* Header Section */
+        #head {
+            text-align: center;
+            margin-top: 120px; /* To push the header down below the fixed navbar */
+        }
 
-    #p{
-        height: 250px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        width: 100%;
-        display: flex;
-        border: 1px solid rgb(223, 218, 218);
+        h1 {
+            font-weight: 900;
+            font-size: 3em;
+            text-align: center;
+        }
 
-    }
-    .t{
-        height: 200px;
-        width: 300px;
-        display: inline-block;
-        color: rgb(6, 6, 6);
-        margin: 50px 1px 25px 150px;
-    }
+        h2 {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 10px;
+        }
 
-    h3{
-        text-align: center;
-    }
-    p{
-        font-size: 30px;
-    }
-</style>
+        /* Image Section */
+        #pic {
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* About Text Section */
+        #text {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 900px;
+        }
+
+        #p {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .t {
+            text-align: center;
+            flex-basis: 250px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .t h1 {
+            font-size: 2.5em;
+            color: #003366;
+        }
+
+        .t h3 {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Footer (Optional) */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+
+            .nav-item {
+                margin: 5px 0;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            #pic {
+                width: 90%;
+                height: auto;
+            }
+
+            #text {
+                width: 90%;
+                margin: 20px;
+                font-size: 1.1em;
+            }
+
+            .t {
+                flex-basis: 100%;
+                margin: 10px 0;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 10px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            #pic {
+                width: 100%;
+                height: auto;
+            }
+
+            #text {
+                font-size: 1em;
+                margin: 15px;
+            }
+
+            .t h1 {
+                font-size: 2em;
+            }
+
+            .t h3 {
+                font-size: 1em;
+            }
+
+            footer {
+                font-size: 0.7em;
+            }
+        }
+
+    </style>
+</head>
 <body>
-    <nav class="navbar" style="width: 100%;">
-        <a href="index.html" class="nav-logo"><p>LearningZone</p></a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">LearningZone</a>
         <div>
-            <a href="login.html" class="nav-item">Sign ln</a>
+            <a href="login.html" class="nav-item">Sign In</a>
             <a href="contact.html" class="nav-item">Contact Us</a>
             <a href="index.html" class="nav-item">Home</a>
         </div>
     </nav>
+
+    <!-- Header Section -->
     <div id="head">
-
-        <h1>About  The  Lean <br>LearningZone</h1>
-        <h2>The Lean Enterprise Website conducts research and shares practical <br> information that advances lean thinking and practice.</h2>
+        <h1>About The Lean LearningZone</h1>
+        <h2>The Lean Enterprise Website conducts research and shares practical information that advances lean thinking and practice.</h2>
     </div>
 
+    <!-- Image Section -->
     <div id="pic">
-        <img src="https://i0.wp.com/codakid.com/wp-content/uploads/2017/07/iStock-598234802.jpg" style="border-radius: 20px;" alt="" width="100%" height="100%">
-        
+        <img src="https://i0.wp.com/codakid.com/wp-content/uploads/2017/07/iStock-598234802.jpg" style="border-radius: 20px;" alt="Lean Image" width="100%">
     </div>
 
+    <!-- About Text Section -->
     <div id="text">
         <h3>
-
             The Lean LearningZone Inc. is a 501(c)(3) nonprofit based in Boston, MA, with a mission to make things better by advancing lean thinking and practice. It was founded in 1997 by management expert James P. Womack, PhD. <br>
-            
             Compared with traditional “think” tanks, we are a “do” tank. In partnership with select organizations, we carefully develop hypotheses about lean thinking and experiment to see which approaches work best in the real world. We then share and teach what we discover, providing new methods for organizational transformation. <br>
             We strive to answer every leader’s and manager’s most pressing question: “What can I do next to make a difference in my organization?”
         </h3>
-        </div>
-        
-        <div id="p">
-            <div class="t">
-                <h1>150+</h1>
-                <h3>Years of Lean Coaching <br> Experience</h3>
-            </div>
-            <div class="t">
-                <h1>29,000+</h1>
-                <h3>People Trained</h3>
-            </div>
-            <div class="t">
-                <h1>150+</h1>
-                <h3>Partner Companies Coached</h3>
-            </div>
-        </div>
-        <div id="text">
-            At LeetCode, our mission is to help you improve yourself and land your dream job. We have a sizable repository of interview resources for many companies. In the past few years, our users have landed jobs at top companies around the world.
+    </div>
 
-            
+    <!-- Stats Section -->
+    <div id="p">
+        <div class="t">
+            <h1>150+</h1>
+            <h3>Years of Lean Coaching <br> Experience</h3>
         </div>
+        <div class="t">
+            <h1>29,000+</h1>
+            <h3>People Trained</h3>
+        </div>
+        <div class="t">
+            <h1>150+</h1>
+            <h3>Partner Companies Coached</h3>
+        </div>
+    </div>
+
+    <!-- Final Text Section -->
+    <div id="text">
+        <p>At Lean LearningZone, our mission is to help you improve yourself and land your dream job. We have a sizable repository of interview resources for many companies. In the past few years, our users have landed jobs at top companies around the world.</p>
+    </div>
+
+    <!-- Footer (Optional) -->
+    <footer>
+        <p>&copy; 2024 LearningZone | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
