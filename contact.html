@@ -3,159 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
-</head>
-<style>
-    .navbar{
-        height: 90px;
-        /* width: 100%; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: calc(100% - 150px);
-        margin: 0 auto;
-        /* margin-top: 30px; */
-        /* padding: 10px 30px; */
-        font-weight: bold;
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #e3e3e3
-                -5px -5px -10px #ffffff;
-        border-radius: 20px;
-    }
+    <title>Contact Us</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
 
-    .nav-logo{
-        color: #ed4c4c;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 10px;
-        background: linear-gradient(#e6e6e6, #ffffff);
-    box-shadow: 5px 5px 10px #ffffff
-            -5px -5px -10px #ffffff;
-        transition: all .1s ease-in-out;
-    }
-
-    .nav-item{
-        color: #448ebe;
-        text-decoration: none;
-        padding: 10px 20px;
-        margin: 0 10px;
-        border-radius: 10px;
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #ffffff
-                -5px -5px -10px #ffffff;
-        transition: all .1s ease-in-out;
-        
-    }
-
-
-    .nav-item:hover {
-        background-color: #d1e4ff;
-        color: #003366;
-    }
-    
-    .nav-logo:hover {
-        background-color: #d1e4ff;
-        color: #003366;
-    }
-
-    .nav-item:active{
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #e3e3e3
-                -5px -5px -10px #ffffff;
-        transform: scale(.95);
-        color: #ac203c;
-    }
-
-    .nav-logo:active{
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #e3e3e3
-                -5px -5px -10px #ffffff;
-        transform: scale(.95);
-        color: #ac203c;
-    }
-
-
-    @media (max-width: 768px) {
+        /* Navbar */
         .navbar {
-            flex-direction: column;
-            align-items: flex-start;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
             width: 100%;
+            background: linear-gradient(#e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #e3e3e3, -5px -5px -10px #ffffff;
+            border-radius: 20px;
+            z-index: 1000;
+            position: fixed;
+            top: 0;
         }
+
+        .nav-logo {
+            color: #ed4c4c;
+            text-decoration: none;
+            font-size: 1.8em;
+            font-weight: bold;
+            padding: 10px;
+            background: linear-gradient(#e6e6e6, #ffffff);
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #ffffff, -5px -5px -10px #ffffff;
+            transition: all 0.1s ease-in-out;
+        }
+
         .nav-item {
-            margin: 5px 0;
+            color: #448ebe;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+            background: linear-gradient(#e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #ffffff, -5px -5px -10px #ffffff;
+            transition: all 0.1s ease-in-out;
         }
-    }
 
-    #main{
-        height: 400px;
-        width: 45%;
-        text-align: center;
-        display: inline;
-    
+        .nav-item:hover,
+        .nav-logo:hover {
+            background-color: #d1e4ff;
+            color: #003366;
+        }
 
-    }
+        .nav-item:active,
+        .nav-logo:active {
+            background: linear-gradient(#e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #e3e3e3, -5px -5px -10px #ffffff;
+            transform: scale(0.95);
+            color: #ac203c;
+        }
 
-    #profile{
-        text-align: center;
-        height: 70%;
-        width: 100%;
-    }
+        /* Header */
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 120px; /* To prevent overlap with fixed navbar */
+        }
 
-#contact{
-    text-align: center;
-}
+        /* Profile & Contact Section */
+        #main {
+            text-align: center;
+            margin-top: 50px;
+        }
 
-img{
-    border-radius: 50%;
+        #profile img {
+            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
+        }
 
-}
+        #contact {
+            margin-top: 20px;
+        }
 
-a{
-    border-radius: 10px;
-        background: linear-gradient(#e6e6e6, #ffffff);
-        box-shadow: 5px 5px 10px #e3e3e3
-                -5px -5px -10px #ffffff;
-                border: none;
-}
+        #contact a {
+            margin: 10px;
+            display: inline-block;
+            background: linear-gradient(#e6e6e6, #ffffff);
+            box-shadow: 5px 5px 10px #e3e3e3, -5px -5px -10px #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+        }
 
-    
-</style>
+        #contact img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            transition: transform 0.2s ease;
+        }
+
+        #contact img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            background-color: #f1f1f1;
+        }
+
+        footer details {
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+
+            .nav-item {
+                margin: 5px 0;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            #main {
+                padding: 10px;
+            }
+
+            #profile img {
+                width: 200px;
+                height: 200px;
+            }
+
+            #contact a {
+                margin: 5px;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            #profile img {
+                width: 150px;
+                height: 150px;
+            }
+
+            #contact a {
+                margin: 5px;
+            }
+
+            footer {
+                font-size: 0.7em;
+            }
+        }
+
+    </style>
+</head>
 <body>
-    <nav class="navbar" style="width: 100%;">
-        <a href="index.html" class="nav-logo"><h1>LearningZone</h1></a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">LearningZone</a>
         <div>
-            <a href="login.html" class="nav-item">Sign ln</a>
+            <a href="login.html" class="nav-item">Sign In</a>
             <a href="about.html" class="nav-item">About</a>
             <a href="index.html" class="nav-item">Home</a>
         </div>
     </nav>
-    <h1 style="text-align: center;">FEEL FREE TO CONTACT ME!</h1>
+
+    <!-- Main Content -->
+    <h1>Feel Free to Contact Me!</h1>
     <div id="main">
         <div id="profile">
-            <img src="harsh.jpg" alt="" height="250px" width="250px">
+            <img src="harsh.jpg" alt="Harsh Mewara" height="250px" width="250px">
         </div>
         <div id="contact">
-            <a href="https://www.instagram.com/h4rshh9__/profilecard/?igsh=eDUxa3VuYWxjMW1r"><img src="https://up.yimg.com/ib/th?id=OIP.JtmXSh_uyZBaTg1eXd-NtgHaHa&pid=Api&rs=1&c=1&qlt=95&w=115&h=115" alt="" height="50px" width="50px"></a>
-
-            <a href=""><img src="https://tse1.mm.bing.net/th?id=OIP.zaiIl16zqTKDuhYIxeop0wHaHa&pid=Api&P=0&h=180" alt="" height="50px" width="50px"></a>
-
-            <a href=""><img src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png" alt="" height="50px" width="50px"></a>
-
-            <a href="https://t.me/unknown14320"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1200px-Telegram_2019_Logo.svg.png" alt="" height="50px" width="50px"></a>
-
-            <a href="https://www.linkedin.com/in/harsh-mewara-216459327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><img src="https://sguru.org/wp-content/uploads/2018/02/Logo-LinkedIn-Round.png" alt="" height="50px" width="50px"></a>
-
-
+            <a href="https://www.instagram.com/h4rshh9__/" target="_blank">
+                <img src="https://up.yimg.com/ib/th?id=OIP.JtmXSh_uyZBaTg1eXd-NtgHaHa&pid=Api&rs=1&c=1&qlt=95&w=115&h=115" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.zaiIl16zqTKDuhYIxeop0wHaHa&pid=Api&P=0&h=180" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/in/harsh-mewara-216459327" target="_blank">
+                <img src="https://sguru.org/wp-content/uploads/2018/02/Logo-LinkedIn-Round.png" alt="LinkedIn">
+            </a>
+            <a href="https://t.me/unknown14320" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1200px-Telegram_2019_Logo.svg.png" alt="Telegram">
+            </a>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <pre style="text-align: center;">
         made with &#9829; by LearningZone <br>
-        &#169;1996-2024, LearningZone.com,nic,or its learn coding
-        <br></pre>
+        &#169;1996-2024, LearningZone.com, nic, or its learn coding
+        </pre>
         <details style="cursor: pointer;">made by Harsh_Mewara.. &#9829; <br>
             contact : 9024#5##35 <br>
-              Email : Hmewara##@gmail.com <br>
+            Email : Hmewara##@gmail.com <br>
+        </details>
+    </footer>
 </body>
 </html>
